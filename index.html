@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Athena | Midlothian Grid for Learning Portal</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+    <!-- Import Styling -->
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Import JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Import Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Image Script -->
+    <script>
+        $(function () {
+            var images = ['1.webp', '2.jpg', '1.webp'];
+            $('#img').css({'background-image': 'url(/assets/img/search/' + images[Math.floor(Math.random() * images.length)] + ')'});
+        });
+    </script>
+</head>
+
+<body>
+    <div id="img"></div>
+    <div class="searchctr">
+        <input type="text" placeholder="Search..">
+
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
