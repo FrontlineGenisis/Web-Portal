@@ -36,18 +36,25 @@ outline:none;
     text-align: center
 }
 .fa-chevron-down {
---fa-animation-duration: 5s;
 font-size: 24px;
-bottom:0;
 color: #fff;
-z-index: 2;    
-    float: bottom;
+z-index: 2; 
+position: absolute;
+  bottom: 10px;
 }
 .searchctr h3 {
+  font-size: 33px;
 font-family: 'Gochi Hand', cursive;
 color: #ffffff;
 z-index: 999;
-text-align: center;
-top: 40%;
-bottom: 60%; 
+margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 50%;
+}
+.down {
+  text-align: center;
 }
