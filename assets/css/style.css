@@ -1,95 +1,94 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Fredoka+One&family=Gochi+Hand&display=swap');
 
-input[type="text"] {
-  font-size: 17px;
-  color: #000;
-  border:0;
-  outline:0;
-  border-radius: 12px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  width: 50%;
-  z-index: 2;
-  outline:none;
-  font-family: 'Comfortaa', cursive;
-
+/* Root Styles */
+:root {
+--bg-color:#181818;
+--default-text-color:#fff;
+--secondary-color:#ff0000;
+}
+a:link {
+text-decoration:none
 }
 
-input[type="submit"] {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 6px;
-    padding-left: 6px;
-color: #000000;
- margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  border-radius: 5px;
-  background-color: #fff;
-  border:0;
-  outline:0;
-    font-size: 15px;
-  font-family: 'Comfortaa', cursive;
-
-
-}
-input[type=text]:focus {
-outline:none;
+a:visited {
+text-decoration:none
 }
 
-#img {
-     position:fixed; 
-    left: 0px; 
-    top: 0px; background-size:100%;  
-     width:100%; height:100%; 
-     -webkit-user-select: none; -khtml-user-select: none; 
-     -moz-user-select: none; -o-user-select: none; user-select: none; 
-  background-size:cover;
-    z-index: -1;
+a:hover {
+text-decoration:none
+}
 
+a:active {
+text-decoration:none
 }
-.searchctr {
-    text-align: center;
+a {
+text-decoration:none;
+color: var(--default-text-color);
 }
-.fa-chevron-down {
-font-size: 24px;
-color: #fff;
-z-index: 2; 
+/* Root Styles End */
+
+body {
+background-color:var(--bg-color);
+color:var(--default-text-color);
+font-family: Rubik;
+font-weight: 400;
+width:100%;
+position:static!important;
+top:0!important;
+margin:0;
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none; 
+}
+.loading {
+position:fixed;
+height:100vh;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:var(--bg-color);
+transition:all .5s;
+z-index:99;
+cursor:progress;
+overflow:hidden
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.loader:before,
+.loader:after {
+  content:"";
+  flex:1;
+  background:#FFF;
+  animation: sp1 2s infinite;
+  border-radius: 100px 0 0 100px;
+  transform-origin: top right;
+  transform: translateY(calc(var(--s,1)*0%)) rotate(0);
+  border: none;
+  outline: none
+}
+.loader:after {
+  transform-origin: bottom left;
+  border-radius: 0 100px 100px 0;
+  --s:-1;
+}
+
+@keyframes sp1 {
+  33%  {transform: translate(0,calc(var(--s,1)*50%)) rotate(0)}
+  66%  {transform: translate(0,calc(var(--s,1)*50%)) rotate(-90deg)}
+  90%,
+  100% {transform: translate(calc(var(--s,1)*-100%),calc(var(--s,1)*50%))  rotate(-90deg)}
+}
+#loader-error {
 position: absolute;
-  bottom: 10px;
-}
-.searchctr h3 {
-  font-size: 33px;
-font-family: 'Gochi Hand', cursive;
-color: #ffffff;
-z-index: 999;
-margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  width: 50%;
-}
-.down {
-  text-align: center;
-}
-.random-fact-ctr {
-background-color: #00d5ff;
-display: fixed;
-width: auto;
-}
-.random-fact-ctr name {
-font-family: 'Comfortaa', cursive;
-color: #fff;
-font-weight: 700;
-}
-.search-section {
-
+bottom: 0px;
 }
