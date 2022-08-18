@@ -1,11 +1,17 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Fredoka+One&family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* Root Styles */
 :root {
---bg-color:#181818;
---default-text-color:#fff;
+--bg-color:#fefbe8;
+--default-text-color:#010417;
 --secondary-color:#ff0000;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--bg-color:#010417;
+--default-text-color:#fefbe8;
+--secondary-color:#ff0000;
+}
 }
 a:link {
 text-decoration:none
@@ -66,9 +72,9 @@ overflow:hidden
 
 .loader:before,
 .loader:after {
-  content:"";
+  content:" ";
   flex:1;
-  background:#FFF;
+  background: var(--default-text-color);;
   animation: sp1 2s infinite;
   border-radius: 100px 0 0 100px;
   transform-origin: top right;
@@ -91,4 +97,8 @@ overflow:hidden
 #loader-error {
 position: absolute;
 bottom: 0px;
+font-family: 'Archivo Black', sans-serif;
+}
+.loader {
+font-size: 20px;
 }
