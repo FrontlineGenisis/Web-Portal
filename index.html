@@ -2,56 +2,54 @@
 <html lang="en-GB">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Gateway | Your Organization</title>
-  <meta name="robots" content="noindex,nofollow">
- <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-<link rel="icon" type="image/png" href="/assets/img/favicon.png">
-  <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- Image Script -->
-  <script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gateway | Your Organization</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<script>
     $(function () {
-      var images = ['1.webp', '2.jpg', '1.webp'];
-      $('#img').css({'background-image': 'url(/assets/img/search/' + images[Math.floor(Math.random() * images.length)] + ')'});
+      var images = ['3.webp', '2.jpg', '1.jpg', '4.jpg'];
+      $('#search-img').css({'background-image': 'url(/assets/img/search/' + images[Math.floor(Math.random() * images.length)] + ')'});
     });
-  </script>
+  </script>-->
 </head>
 
 <body>
-   <div class="loading">
+    <div class="loading">
         <div class="loader">
         </div>
-    <p id="loader-error"><i class="fa-solid fa-satellite-dish"></i> Connection trouble? Report it <a href="mailto:test@yourorg.net"><b>here.</b></a></p>
-
-   </div>
-
-
-  <!-- Import Other Scripts -->
-  <script src="./assets/js/script.js"></script>
-<script>
-  $(document).ready(function(){
-    $('#loader-error').hide().delay(6000).fadeIn('slow');
-  });
-</script>
- <!-- <script>
-        const loader = document.querySelector(".loader");
+        <p id="loader-error"><i class="fa-solid fa-satellite-dish"></i> Connection trouble? Report it <a href="mailto:test@yourorg.net">here.</a></p>
+    </div>
+    <div id="search-ctr">
+        <div id="search-img"></div>
+        <form id="search-bar" role="search">
+            <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content"><button class="search-bar-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#loader-error').hide().delay(6000).fadeIn('slow');
+          });
+    </script>
+    <script>
+        const loader = document.querySelector(".loading");
           window.onload = function(){
             setTimeout(function(){
               loader.style.opacity = "0";
               setTimeout(function(){
                 loader.style.display = "none";
+
               }
                          , 500);
             }
                        ,1500);
           }
-    </script>-->
+    </script>
 </body>
 
 </html>

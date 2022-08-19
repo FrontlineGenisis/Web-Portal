@@ -2,14 +2,14 @@
 
 /* Root Styles */
 :root {
---bg-color:#fefbe8;
+--bg-color:#ffffff;
 --default-text-color:#010417;
 --secondary-color:#ff0000;
 }
 @media (prefers-color-scheme: dark) {
 :root {
 --bg-color:#010417;
---default-text-color:#fefbe8;
+--default-text-color:#ffffff;
 --secondary-color:#ff0000;
 }
 }
@@ -48,7 +48,7 @@ margin:0;
 -khtml-user-select:none;
 -moz-user-select:none;
 -ms-user-select:none;
-user-select:none; 
+user-select:none;
 }
 .loading {
 position:fixed;
@@ -61,13 +61,15 @@ background:var(--bg-color);
 transition:all .5s;
 z-index:99;
 cursor:progress;
-overflow:hidden
+overflow:hidden;
+z-index: 100;
 }
 
 .loader {
   width: 40px;
   height: 40px;
   display: flex;
+  z-index: 101;
 }
 
 .loader:before,
@@ -101,4 +103,55 @@ font-family: 'Archivo Black', sans-serif;
 }
 .loader {
 font-size: 20px;
+}
+#search-ctr {
+}
+#search-img {
+position: absolute;
+top: 0; right: 0; bottom: 0; left: 0;
+/* background-image: url("//34r53gty3u4ngtf3yufgt.race-life.net/assets/img/search/2.jpg"); */
+background-color:var(--bg-color);
+width: 100%;
+height: auto;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center center;
+/* filter: brightness(70%); */
+z-index: 1;
+}
+#search-bar {
+z-index: 99;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+}
+input[type=search] {
+  color: var(--default-text-color);
+  border: 1px solid var(--default-text-color);
+  outline: none;
+  background-color: rgba(255, 255, 255, .0);
+  width: 90%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-sizing: border-box;
+z-index: 5;
+}
+.search-bar-button {
+background-color: rgba(255, 255, 255, .0);
+color: var(--default-text-color);
+border: 1px solid var(--default-text-color);
+outline: none;
+z-index: 7;
+padding: 15px;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+margin-left: 5px;
 }
